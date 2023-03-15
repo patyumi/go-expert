@@ -26,12 +26,29 @@ import (
 
 // TODO : Finalizar testes https://quii.gitbook.io/learn-go-with-tests/go-fundamentals/hello-world
 
-func Hello() string {
-	return "Hello, my name is Patrícia"
+const (
+	englishHelloPrefix = "Hello, my name is "
+	spanishHelloPrefix = "Hola, meu nombre es "
+	frenchHelloPrefix  = "Bonjour, "
+)
+
+func Hello(name string, language string) string {
+	prefix := englishHelloPrefix
+
+	switch language {
+	case "spanish":
+		prefix = spanishHelloPrefix
+	case "french":
+		prefix = frenchHelloPrefix
+	default:
+		prefix = englishHelloPrefix
+	}
+
+	return prefix + name
 }
 
 func main() {
-	fmt.Println(Hello())
+	fmt.Println(Hello("Patrícia", "spanish"))
 	os.Exit(3)
 }
 
