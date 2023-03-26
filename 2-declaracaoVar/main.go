@@ -4,6 +4,7 @@ package main
 // Essa declaração é global por que está fora de funções, ou seja, em escopo global
 var (
 	// Tipagem forte: Depois que uma variável nasce com um tipo você nunca mais consegue mudar ela
+	// Entretando, em uma variável, é possível alterar o valor dela durante sua vida
 	b bool = true
 	c int
 	d string
