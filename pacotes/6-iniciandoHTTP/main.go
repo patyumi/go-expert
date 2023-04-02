@@ -23,6 +23,7 @@ func main() {
 	// go run main.go
 	// em outro terminal curl localhost:8080
 	http.HandleFunc("/", BuscaCEPHandler)
+	// isso sobe um multiplex, que recebe rotas atachadas a ele
 	http.ListenAndServe(":8080", nil)
 }
 
