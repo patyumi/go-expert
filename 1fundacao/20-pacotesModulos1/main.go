@@ -1,10 +1,6 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/patyumi/go-expert/20-pacotesModulos1/matematica"
-)
+//"github.com/patyumi/go-expert/20-pacotesModulos1/matematica"
 
 // Essa aula aqui fala sobre os modulos para importar pacotes dentro da pasta
 // então ele fala do go mod init - go mod tidy
@@ -14,6 +10,6 @@ import (
 // e isso nào é só pra funções, se aplica as variaveis tambem, qualquer uma, seja dentro de um struct etc
 
 func main() {
-	s := matematica.Soma(10, 20)
-	fmt.Printf("Resultado: %v", s)
+	//s := matematica.Soma(10, 20)
+	//fmt.Printf("Resultado: %v", s)
 }
