@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+)
+
+var number uint64 = 0
+
+// thread main já é 1 thread
+func main() {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		number++
+		w.Write([]byte(fmt.Sprintf("Você é o visitante #%d ", number)))
+	})
+	http.ListenAndServe(":3000", nil)
+}
