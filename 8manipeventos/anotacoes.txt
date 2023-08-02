@@ -1,0 +1,9 @@
+// Evento é algo que aconteceu no passado
+// exemplo: registro foi inserido
+
+// Elementos táticos
+// Evento (carregar dados)
+// Operações que serão executadas quando um evento é chamado
+// Gerenciador dos nossos eventos
+// -> registrar eventos e suas opera~coes
+// -> despachar / fire no evento para que suas operações sejam executadas
