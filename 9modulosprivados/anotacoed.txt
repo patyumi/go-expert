@@ -1,0 +1,17 @@
+Ao tentar importar modulos privados, por padrão ele não consegue baixar.
+Nas variáveis de ambiente `gov env` GOPRIVATE é possível alocar os repositórios privados, separados por vírgula
+E aí você consegue baixar o seu repo privado
+
+Quando você não tem autenticação no github/repo você pode passar credenciais para ele realizar essa autenticação.
+-> login e token github (autenticação http)
+-> ssh github (autenticação via ssh)
+
+[url "ssh://git@github.com/"]
+insteadOf = https://github.com/
+
+Go Proxy VS Vendor
+proxy.golang.org -> centraliza os principais projetos fora do github
+Mas nem sempre todos os projetos estão cacheados
+
+Como solução vc pode ter as dependencias dentro do seu proprio projeto
+`go mod vendor`
