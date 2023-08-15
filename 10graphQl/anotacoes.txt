@@ -1,0 +1,6 @@
+GraphQL
+É uma chamada rpc comum que é enviada num formato que o servidor consegue entender e retornar apenas os campos necessários.
+
+Backend for frontend.
+
+Mutation é quando vc vai alterar algum dado
