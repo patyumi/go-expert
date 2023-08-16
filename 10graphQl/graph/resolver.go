@@ -8,4 +8,5 @@ import "github.com/patyumi/go-expert/10graphQl/internal/database"
 
 type Resolver struct {
 	CategoryDB *database.Category
+	CourseDB   *database.Course
 }

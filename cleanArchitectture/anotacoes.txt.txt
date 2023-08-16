@@ -1,0 +1,94 @@
+#Sobre
+criado pelo tal do uncle bob em 2012
+tem um livro
+proteção do domínio da aplicação
+baixo acoplamento entre as camadas
+
+orientada a caso de uso - intent - intenção
+
+#Pontos Importantes
+ajuda a formatar o software
+conseguir dividir claramente os componentes
+comunicação entre componentes
+
+#Objetivo final
+Maximizar produtividade.
+
+#Regras vs detalhes
+Regras de negócio trazem valor p/ software
+Detalhes (ex.: rabbitmq, bd) nao devem impactar regras de negocio
+
+#Use cases
+Representam uma intenção
+SRP - Single Responsability Principle
+
+Limitações -> Exemplo: meu app faz calculo de juros, a taxa desse juros vai mudar por causa dos componentes que uso? 
+Quando um componente não afeta a regra de negócio ele deve estar em uma camada diferente.
+
+#DTOs - Data Transfer Object
+Objetos anêmicos, não possuem comportamento, ele é só um objeto
+Contém apenas dados de input / output
+Casa use case possui seu DTO de input e output
+Controller pega os dados criando um DTO e passa isso para o use case (API->CONTROLLER->USECASE->ENTITY)
+
+#Presenters
+Adequa o formato do DTO de output para formatos (JSON, XML, GRAPHQL)
+
+#Entities vs DDD
+Entities da Clean Architecture (conceito de camada) <> Entities DDD (representação de algo único)
+
+#Estrutura de pastas projeto prático https://github.com/devfullcycle/goexpert/tree/main/20-CleanArch
+>api
+>cmd
+>config
+>internal
+	>entity
+	tem o modelo
+	interface tbm tem aqui
+	
+	>use case (recebe DTO, salva no banco e envia resultado pra fora, dá um dispatch)
+	tem os DTOs de input e output
+	também contém as interfaces
+	tem um método que recebe o input DTO e transforma isso no Order lá do entity, ai ele faz a logica de criar o objeto
+
+	>infra (aqui não tem teste)
+	comunica com o mundo externo
+		>database
+		implementa interface lá do entity por exemplo
+
+		> webserver
+		tem um hanlder aqui tbm com as interfaces
+
+		> grpc
+
+		> graph
+
+
+	>event (pode ficar dentro da pasta de infra tbm)
+	tem os handlers, aqui ele faz a fila do rabbimq
+
+
+>pkg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
