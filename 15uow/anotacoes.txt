@@ -1,0 +1,20 @@
+UOW - Unit Of Work
+
+trata inconsistencias com bagin, commit e rollback
+
+Como por exemplo, eu preciso salvar 2 dados mas, no meio do caminho salva apenas 1
+gerando uma inconsistencia
+
+Estrutura
+Register
+getRepository
+UnRegister
+DO (
+
+    BEGIN
+    Transacao 1 -> Repositorio 1
+    Transacao 2 -> Repositorio 2
+    COMMIT | ROLLBACK
+)
+
+
