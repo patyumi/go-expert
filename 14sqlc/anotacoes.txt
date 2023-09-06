@@ -1,0 +1,16 @@
+MIGRATE
+install cli https://github.com/golang-migrate/migrate
+
+migrate create -ext=sql -dir=sql/migrations -seq init
+
+migrate -path=sql/migrations -database "mysql://root:root@tcp(localhost:3306)/courses"--verbose up
+migrate -path=sql/migrations -database "mysql://root:root@tcp(localhost:3306)/courses"--verbose down
+
+SQLX
+https://github.com/jmoiron/sqlx
+
+SQLC
+só é suportado por postgres e mysql
+install https://docs.sqlc.dev/en/latest/overview/install.html
+
+sqlc generate
