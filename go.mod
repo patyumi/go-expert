@@ -6,6 +6,7 @@ require (
 	github.com/aws/aws-sdk-go v1.45.2
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/google/uuid v1.3.0
+	github.com/google/wire v0.5.0
 	github.com/mattn/go-sqlite3 v1.14.17
 	github.com/rabbitmq/amqp091-go v1.8.1
 	github.com/spf13/cobra v1.7.0

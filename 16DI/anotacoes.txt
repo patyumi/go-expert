@@ -1,0 +1,14 @@
+Dependency Injection
+
+Go tem muitas bibliotecas que trabalham bem a injeção de dependecias.
+Tem a uber FX, ele trabalha com reflection
+E também google wire, que faz geração de código com dependecias
+
+Google wire
+
+
+Cria um arquivo wire.go e especifica o que vc quer nele
+e coloca essas tags nele
+//go:build wireinject
+// +build wireinject
+
