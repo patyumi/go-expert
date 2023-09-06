@@ -1,0 +1,13 @@
+o Cli é apenas um adaptador
+
+cobra-cli init
+
+cobra-cli add <command>
+
+go run main.go <comand> <-args=args>
+
+//cria uma cli dentro de outra, como se fosse -p de pai
+cobra-cli add create -p 'categoryCmd'
+
+//persistent flags sao globais pode ser colocada no contexto pai e ai ela fica global em todos os filhos
+//flag local vai funcionar apenas naquele comando específico
